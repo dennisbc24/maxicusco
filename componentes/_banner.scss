@@ -1,0 +1,8 @@
+.banner {
+    width: auto;
+    height: 210px;
+    margin: 10px;
+    @include fondo-tr;
+    @include borde1;
+
+}
