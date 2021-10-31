@@ -101,35 +101,67 @@ main {
 .articulos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 7px 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 7px;
+  -ms-grid-columns: 1fr 4px 1fr 4px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
   width: 100%;
-  padding: 0 10px;
+  margin: 10px 10px 10px 10px;
 }
+
 .articulos__container {
-  width: auto;
-  height: auto;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 6px;
+  margin: 10px 10px 10px 0px;
   background-color: white;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), -2px -2px 15px rgba(255, 255, 255, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), -2px -2px 15px rgba(255, 255, 255, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
   border-radius: 15px;
 }
-.articulos__container img {
-  width: 80px;
-  border-radius: 15px;
+.articulos__container .detalles {
   margin-left: 10px;
+  margin-top: 7px;
+}
+.articulos__container .detalles p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.articulos__container .detalles h1 {
+  font-family: "Baloo Bhaina 2";
+  color: #C71E1A;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: -5px;
+}
+
+.articulos__container img {
+  display: block;
+  width: 100%;
+}
+
+.masonry-layout {
+  --columns:1;
+  --gap: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-gap: var(--gap/2);
+  padding-left: 10px;
+}
+.masonry-layout .masonry-item {
+  margin-bottom: var(--gap);
+}
+.masonry-layout.columns-1 {
+  --columns: 1;
+}
+.masonry-layout.columns-2 {
+  --columns: 2;
+}
+.masonry-layout.columns-3 {
+  --columns: 3;
+}
+.masonry-layout.columns-4 {
+  --columns: 4;
 }
 
 footer {

@@ -1,24 +1,62 @@
 .articulos{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 7px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4px;
     width: 100%;
-    padding: 0 10px;
-    &__container {
-        width: auto;
-        height: auto;
-        border-radius: 10px;
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        background-color: $Color-claro;
-        @include borde1;
-        img {
-            width: 80px;
-            border-radius: 15px;
-            margin-left: 10px;
+    
+    margin: 10px 10px 10px 10px;
+    
+}
+.articulos__container{
+    padding: 6px;
+    margin: 10px 10px 10px 0px;
+    background-color: $Color-claro;
+    @include borde1;
+    .detalles{
+        margin-left: 10px;
+        margin-top: 7px;
+        p{
+            font-size: 1rem;
+            font-weight: 500;
         }
         
+        h1 {
+            font-family: $Fuente2;
+            color: $Color-precio;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: -5px;
+            
+        }
+
     }
+
 }
+.articulos__container img {
+    display: block;
+    width: 100%;
+}
+        
+    
+    .masonry-layout{
+        --columns:1;
+        --gap: 5px;
+        $columns: 4;
+    
+        display: grid;
+        grid-template-columns: repeat(var(--columns),1fr);
+        grid-gap: var(--gap/2);
+        padding-left: 10px;
+        .masonry-item {
+            margin-bottom: var(--gap);
+        }
+    
+        @for $i from 1 through $columns {
+            &.columns-#{$i} {
+                --columns: #{$i};
+            }
+        }
+    }
+    
     
