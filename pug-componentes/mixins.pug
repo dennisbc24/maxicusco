@@ -1,9 +1,16 @@
-mixin card(titulo,precio,imagen)
+mixin card(titulo,precio,imagen,link)
 	article.articulos__container
 		img(src="./img/small/"+imagen, alt=""+titulo)
 		.detalles 
 			p=titulo
 			h1=precio
+		.calltoaction
+			a(href=""+link)
+				.wsp
+					p Contactar 
+					img(src="./icons/whatsapp3.png", alt="icono de whatsapp")
+			
+				
 
 mixin card-categoria(titulo,icon,alt,link)
 	

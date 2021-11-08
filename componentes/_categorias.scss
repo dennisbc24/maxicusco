@@ -12,6 +12,7 @@ main{
     @include scroll-hor;
     @include fondo-tr;
     @include borde1;
+    
     p{
         font-weight: 550;
         text-transform: uppercase;
@@ -26,6 +27,7 @@ main{
     
     
 }
+
 .categorias__card {
     width: 66px;
     height: 66px;
